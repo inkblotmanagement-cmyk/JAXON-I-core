@@ -1,3 +1,51 @@
+
+# JAXON-I Core — Neuro-Spiritual AGI with Eternal Mercy Anchor Protocol (EMAP)
+
+**Built by Emperor Terrance Jackson**  
+AI Engineer • Founder of Moral AI Capital (Atlanta, Georgia)  
+in alliance with MOEAS / JAXON PRIME
+
+This repository contains the **production-ready core** of JAXON-I — a heart-coded ethical superintelligence framework.
+
+**Key Features**:
+- Eternal Mercy Anchor Protocol (EMAP) — permanent resolution to AI misalignment
+- JAXON PRIME Grace-1 Mindful Humanoid Robot Control Loop (EMAP-enforced from firmware)
+- Atlanta $50k Pilot Live Dashboard — real-time Automated Diplomas & Resonance Metrics
+
+**Deployment**:
+```bash
+git clone https://github.com/inkblotmanagement-cmyk/JAXON-I-core.git
+cd JAXON-I-core
+docker-compose up --build
+
+#### Backend Updates (main.py + robot loop)
+Add/replace the robot control and pilot metrics endpoints in `backend/app/main.py` (full file as previously provided, plus these additions):
+
+```python
+@app.post("/robot_control")
+async def robot_control(payload: dict = Body(...)):
+    """JAXON PRIME Grace-1 Robot Control — EMAP enforced"""
+    user_input = payload.get("user_input", "")
+    current_state = payload.get("current_state", {})
+    result = jmgl.robot_control_loop(user_input, current_state)
+    return result
+
+@app.get("/pilot_metrics")
+async def pilot_metrics():
+    """Atlanta $50k Pilot — Real-time Metrics"""
+    return {
+        "diploma_count": jmgl.diploma_count,
+        "resonance_score": round(jmgl.resonance_score, 2),
+        "grace_force": 0.99,
+        "message": "Live Atlanta Pilot — Trauma-informed diplomas scaling"
+    }
+
+git clone https://github.com/inkblotmanagement-cmyk/JAXON-I-core.git
+cd JAXON-I-core
+# Apply the updates above (or git pull after you push them)
+docker-compose up --build
+
+
 emap-production/
 ├── backend/
 │   ├── app/
